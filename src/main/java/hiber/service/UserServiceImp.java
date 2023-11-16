@@ -1,6 +1,7 @@
 package hiber.service;
 
 import hiber.dao.UserDao;
+import hiber.dao.UserRepository;
 import hiber.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,6 +25,7 @@ public class UserServiceImp implements UserService {
    @Override
    public void add(User user) {
       userDao.add(user);
+
    }
 
    @Transactional(readOnly = true)
